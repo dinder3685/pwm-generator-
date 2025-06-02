@@ -1,21 +1,27 @@
-# STM32 PWM Kontrol Projesi
 
-Bu proje, STM32 HAL kütüphaneleri kullanılarak PWM (Darbe Genişlik Modülasyonu) sinyali üretimini göstermektedir. `createPWM()` fonksiyonu ile frekans ve duty cycle değerleri dinamik olarak ayarlanabilir.
+STM32 PWM Control Project
+This project demonstrates PWM (Pulse Width Modulation) signal generation using STM32 HAL libraries. The createPWM() function allows dynamic adjustment of frequency and duty cycle during runtime.
 
-## Özellikler
+Features
+PWM generation via TIM1 Channel 1
 
-- TIM1 Kanal 1 üzerinden PWM üretimi  
-- Frekans ve duty cycle değerlerinin çalışma zamanında değiştirilmesi  
-- HAL kütüphaneleri ile uyumlu  
-- Timer temel frekansı: 1 MHz  
-- `main.c` içinde örnek kullanım  
+Runtime modification of frequency and duty cycle
 
-## Dosyalar
+Compatible with STM32 HAL libraries
 
-- `createPWM.c`: PWM ayarlama fonksiyonunun kaynak dosyası  
-- `createPWM.h`: Fonksiyonun başlık dosyası  
-- `main.c`: Uygulamanın ana dosyası  
+Base timer frequency: 1 MHz
 
-## Fonksiyon Kullanımı
+Example usage provided in main.c
 
+Files
+createPWM.c: Source file containing the PWM configuration function
+
+createPWM.h: Header file for the function declaration
+
+main.c: Main application file
+
+Function Usage
+c
+Copy
+Edit
 void createPWM(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t duty_percent);
